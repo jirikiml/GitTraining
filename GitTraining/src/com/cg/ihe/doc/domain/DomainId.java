@@ -92,7 +92,7 @@ public class DomainId implements Serializable {
 
         DomainId other = (DomainId) obj;
 
-        return ComparisonHelper.equals(patientIds, other.getPatientIds());
+        return true;
     }
 
     /**
