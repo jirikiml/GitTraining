@@ -80,8 +80,8 @@ public class DomainId implements Serializable {
      */
     @Override
     public boolean equals(Object other) {
-        if (this == other) {
-            return true;
+        if (this != other) {
+            return false;
         }
         if (other == null) {
             return false;
