@@ -254,34 +254,4 @@ public class DocumentId {
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
-
-    public String getAssigningAuthorityId() throws DocumentMetadataTransformerException {
-        if (id != null) {
-            if (!id.contains("^")) {
-                throw new DocumentMetadataTransformerException(this, "The coded uniqueId could not be converted. Missing the '^' delimiter character");
-            } else {
-                int delimiterIndex = id.indexOf('^');
-                if (delimiterIndex < 1 || delimiterIndex >= id.length()) {
-                    throw new DocumentMetadataTransformerException(this, "The  coded uniqueId could not be converted. Missing the extension and/or OID part");
-                }
-                return id.substring(0, delimiterIndex);
-            }
-        }
-        return null;
-    }
-
-    public String getIdValue() throws DocumentMetadataTransformerException {
-        if (id != null) {
-            if (!id.contains("^")) {
-                throw new DocumentMetadataTransformerException(this, "The coded uniqueId could not be converted. Missing the '^' delimiter character");
-            }
-            int delimiterIndex = id.indexOf('^');
-            if (delimiterIndex < 1 || delimiterIndex >= id.length()) {
-                throw new DocumentMetadataTransformerException(this, "The coded uniqueId could not be converted. Missing the extension and/or OID part");
-            }
-            return id.substring(delimiterIndex + 1);
-        }
-        return null;
-    }
-
 }
