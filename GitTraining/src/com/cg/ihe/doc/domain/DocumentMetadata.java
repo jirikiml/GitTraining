@@ -1,6 +1,5 @@
 package com.cg.ihe.doc.domain;
 
-import com.cg.ihe.core.exception.IHERuntimeException;
 import com.cg.ihe.doc.DocumentType;
 import com.cg.ihe.doc.domain.enums.DocumentState;
 import com.cg.ihe.doc.domain.impl.CodedValueImpl;
@@ -405,7 +404,7 @@ public class DocumentMetadata implements Comparable<DocumentMetadata> {
             try {
                 rawDocumentMimeType = new MimeType(DocumentType.MimeType.UNKNOWN);
             } catch (MimeTypeParseException e) {
-                throw new IHERuntimeException("Mime type was not recognized " + DocumentType.MimeType.UNKNOWN, e);
+//                throw new IHERuntimeException("Mime type was not recognized " + DocumentType.MimeType.UNKNOWN, e);
             }
         }
         return rawDocumentMimeType;
