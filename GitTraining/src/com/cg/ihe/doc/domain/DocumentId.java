@@ -11,7 +11,6 @@
 
 package com.cg.ihe.doc.domain;
 
-import com.cg.ihe.exception.DocumentMetadataTransformerException;
 
 /**
  * The identifier of a single document.
