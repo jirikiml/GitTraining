@@ -79,18 +79,16 @@ public class DomainId implements Serializable {
      * Ignores domain.
      */
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
+    public boolean equals(Object other) {
+        if (this == other) {
             return true;
         }
-        if (obj == null) {
+        if (other == null) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        if (getClass() != other.getClass()) {
             return false;
         }
-
-        DomainId other = (DomainId) obj;
 
         return true;
     }
