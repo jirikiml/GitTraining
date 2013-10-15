@@ -1,7 +1,5 @@
 package com.cg.ihe.doc.domain;
 
-import com.cg.ihe.core.util.ComparisonHelper;
-
 import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
 import java.util.List;
@@ -94,7 +92,7 @@ public class DomainId implements Serializable {
 
         DomainId other = (DomainId) obj;
 
-        return ComparisonHelper.equals(patientIds, other.getPatientIds());
+        return true;
     }
 
     /**
