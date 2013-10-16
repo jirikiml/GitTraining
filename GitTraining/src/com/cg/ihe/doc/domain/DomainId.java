@@ -87,7 +87,7 @@ public class DomainId implements Serializable {
             return false;
         }
         if (getClass() != other.getClass()) {
-            return false; // test
+            return false;
         }
 
         return true;
